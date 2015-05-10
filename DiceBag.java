@@ -64,6 +64,11 @@ public class DiceBag
         return label;
     }
 
+    /**
+     * Finds a die object and returns it. Returns null if not found.
+     * @param label what to search for
+     * @return d
+     */
     protected Die findDie(String label) {
         for(Die d : dice) {
             if(label.equals(d.getLabel()))
@@ -72,6 +77,10 @@ public class DiceBag
         return null;
     }
 
+    /**
+     * Search and remove all occurences with the chosen label
+     * @param label what to search for
+     */
     public void removeDie(String label) {
         ArrayList<Die> rList = new ArrayList<Die>();
         for(Die d : dice) {

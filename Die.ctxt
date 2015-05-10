@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.params=amount\ nSides\ mod
+comment0.target=Die(int,\ int,\ int)
+comment0.text=\n\ Default\ constructor\n\ @param\ amount\ amount\ of\ dice\n\ @param\ nSides\ number\ of\ sides\ on\ the\ die\n\ @param\ mod\ assigns\ a\ modifier\ to\ the\ die\ roll\n\ @throws\ IllegalArgumentException\ if\ nSides\ is\ invalid\n
+comment1.params=
+comment1.target=java.lang.String\ roll()
+comment1.text=\n\ Rolls\ the\ die\n\ @return\ result\n
+comment2.params=
+comment2.target=int\ getSides()
+comment2.text=\n\ Returns\ the\ number\ of\ sides\n\ @return\ nSides\n
+comment3.params=
+comment3.target=java.lang.String\ getLabel()
+comment3.text=\n\ Returns\ the\ die\ label\n\ @return\ label\n
+comment4.params=
+comment4.target=void\ validDies()
+comment5.params=nSides
+comment5.target=void\ addLabel(int)
+comment5.text=\n\ Assigns\ a\ label\ to\ the\ die\n\ @param\ nSides\ number\ of\ sides\ on\ the\ die\n
+comment6.params=d1\ d2
+comment6.target=int\ compare(Die,\ Die)
+numComments=7

@@ -111,7 +111,13 @@ public class Die
         }
     }
 
+    /**
+     * Sets up a comparator used to sort the dice according to the number of
+     * sides.
+     * @return ascending list of dice
+     */
     public static Comparator<Die> sorter = new Comparator<Die>() {
+        @Override
         public int compare(Die d1, Die d2) {
             int side1 = d1.getSides();
             int side2 = d2.getSides();
