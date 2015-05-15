@@ -11,24 +11,18 @@ import java.util.Comparator;
 public class Die
 {
     private int nSides;
-    private Random r;
+    private Random randDie;
     private ArrayList<Integer> validDie;
     private String label;
-    private int mod;
-    private int amount;
 
     /**
      * Default constructor
-     * @param amount amount of dice
      * @param nSides number of sides on the die
-     * @param mod assigns a modifier to the die roll
      * @throws IllegalArgumentException if nSides is invalid
      */
-    public Die(int amount, int nSides, int mod) {
+    public Die(int nSides) {
         validDie = new ArrayList<Integer>();
-        r = new Random();
-        this.amount = amount;
-        this.mod = mod;
+        randDie = new Random();
         validDies();
         addLabel(nSides);
 
@@ -44,13 +38,8 @@ public class Die
      * Rolls the die
      * @return result
      */
-    public String roll() {
-        int res = 0;
-        for(int i = 0; i < amount; i++)
-            res += r.nextInt(nSides) + 1;
-        res += mod;
-        String result = String.valueOf(res);
-        
+    public int roll() {
+        int result = randDie.nextInt(nSides) + 1;
         return result;
     }
 
@@ -85,28 +74,27 @@ public class Die
      * @param nSides number of sides on the die
      */
     protected void addLabel(int nSides) {
-        String a = String.valueOf(amount);
         switch(nSides) {
             case 4:
-                label = a + "d4+" + String.valueOf(mod);
+                label = "d4";
                 break;
             case 6:
-                label = a + "d6+" + String.valueOf(mod);
+                label = "d6";
                 break;
             case 8:
-                label = a +  "d8+" + String.valueOf(mod);
+                label = "d8";
                 break;
             case 10:
-                label = a + "d10+" + String.valueOf(mod);
+                label = "d10";
                 break;
             case 12:
-                label = a + "d12+" + String.valueOf(mod);
+                label = "d12";
                 break;
             case 20:
-                label = a + "d20+" + String.valueOf(mod);
+                label = "d20";
                 break;
             case 100:
-                label = a + "d100+" + String.valueOf(mod);
+                label = "d100";
                 break;
         }
     }

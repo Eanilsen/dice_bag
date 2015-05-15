@@ -27,13 +27,13 @@ public class DiceBag
      * Creates and adds one of each of the 7 dice
      */
     protected void addDefaultDice() {
-        dice.add(new Die(1, 4, 0));
-        dice.add(new Die(1, 6, 0));
-        dice.add(new Die(1, 8, 0));
-        dice.add(new Die(1, 10, 0));
-        dice.add(new Die(1, 12, 0));
-        dice.add(new Die(1, 20, 0));
-        dice.add(new Die(1, 100, 0));
+        dice.add(new Die(4));
+        dice.add(new Die(6));
+        dice.add(new Die(8));
+        dice.add(new Die(10));
+        dice.add(new Die(12));
+        dice.add(new Die(20));
+        dice.add(new Die(100));
     }
 
     /**
@@ -48,12 +48,10 @@ public class DiceBag
 
     /**
      * Lets the user add dice
-     * @param amount amount of the chosen die
      * @param nSides number of sides on the die
-     * @param mod accounts for the chosen modifier
      */
-    public void addDie(int amount, int nSides, int mod) {
-            dice.add(new Die(amount, nSides, mod));
+    public void addDie(int nSides) {
+            dice.add(new Die(nSides));
     }
 
     /**
@@ -89,4 +87,5 @@ public class DiceBag
         }
         dice.removeAll(rList);
     }
+
 }
